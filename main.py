@@ -20,12 +20,11 @@ for c in codons:
 print(cd)
 
 match = 0
-
+mismatch = 0
 
 for element in tictac:
     tic = element[1]
     tac = element[2]
-
 
     ac = tic
     print(ac)
@@ -45,9 +44,12 @@ for element in tictac:
                 ac = result
 
     if tac == ac:
-        print('Match' + '\n')
         match +=1
-    else:
-        print('No match' + '\n')
 
-print ("{0:.0f}%".format(100*match/len(tictac)))
+    if tac != ac:
+        print('Mismatch' + '\n')
+        mismatch = 1
+    else:
+        print('No mismatch' + '\n')
+
+print ("{0:.0f}%".format(1 + float(mismatch) + 100*match/len(tictac)))
