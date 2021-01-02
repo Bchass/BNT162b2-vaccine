@@ -1,5 +1,5 @@
 # BNT162b2-vaccine
-The point of this is to create an algorithm to figure out the RNA sequence of the BNT162b2-vaccine. Currently sitting at 60% efficiency. 
+The point of this challenge is to create an algorithm to figure out the RNA sequence of the BNT162b2-vaccine.
 
 Came across:
 - [Reverse Engineering the source code of the BioNTech/Pfizer SARS-CoV-2 Vaccine](https://berthub.eu/articles/posts/reverse-engineering-source-code-of-the-biontech-pfizer-vaccine/) 
