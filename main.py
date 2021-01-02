@@ -45,11 +45,11 @@ for element in tictac:
 
     if tac == ac:
         match +=1
-
+    
     if tac != ac:
         print('Mismatch' + '\n')
         mismatch = 1
     else:
         print('No mismatch' + '\n')
 
-print ("{0:.0f}%".format(1 + float(mismatch) + 100*match/len(tictac)))
+print ("{0:.1f}%".format(1 + float(mismatch) + 100*match/len(tictac)))
