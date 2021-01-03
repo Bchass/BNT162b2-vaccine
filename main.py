@@ -50,6 +50,6 @@ for element in tictac:
         print('Mismatch' + '\n')
         mismatch = 1
     else:
-        print('No mismatch' + '\n')
+        print('Match' + '\n')
 
 print ("{0:.1f}%".format(1 + float(mismatch) + 100*match/len(tictac)))
