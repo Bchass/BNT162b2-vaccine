@@ -1,8 +1,8 @@
 import csv
 
 def read_csv_file(filename):
-    with open(filename, 'rt') as fp:
-        reader = csv.reader(fp, delimiter=',')
+    with open(filename, 'rt') as fn:
+        reader = csv.reader(fn, delimiter=',')
         next(reader)
         return list(reader)
 
