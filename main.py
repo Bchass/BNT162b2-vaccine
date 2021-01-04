@@ -1,4 +1,3 @@
-
 import csv
 
 def read_csv(filename):
@@ -52,4 +51,4 @@ for element in tictac:
     else:
         print('Match' + '\n')
 
-print ("{0:.1f}%".format(1 + float(mismatch) + 100*match/len(tictac)))
+print ("Codon match: ""{0:.1f}%".format(1 + float(mismatch) + 100*match/len(tictac)))
