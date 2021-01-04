@@ -1,35 +1,27 @@
 import csv
 
-def read_csv(filename):
-    records = []
+def read_csv_file(filename):
     with open(filename, 'rt') as fp:
-        reader = csv.reader(fp, delimiter=',', quotechar='"')
-        for x, row in enumerate(reader):
-            if x > 0:
-                records.append(row)
+        reader = csv.reader(fp, delimiter=',')
+        next(reader)
+        return list(reader)
 
-    return records
+codons = read_csv_file('codon-table-grouped.csv')
+tictac = read_csv_file('side-by-side.csv')
 
-codons = read_csv('codon-table-grouped.csv')
-tictac = read_csv('side-by-side.csv')
-
-cd = {}
-for c in codons:
-    cd[c[1]] = c[0]
+cd = {c: codon for codon, c in codons}
 print(cd)
 
 match = 0
 mismatch = 0
 
-for element in tictac:
-    tic = element[1]
-    tac = element[2]
+for(_, tic, tac) in tictac:
 
     ac = tic
     print(ac)
 
-    if tic[2] == 'G' or tic[2] == 'C':
-        print("Codon is G/C")
+    if tic[2] in ['G','C']:
+        print("Codon is already G or C")
     else:
         result = tic[:2] + "C"
         print("Replacing with C, result: " + result)
