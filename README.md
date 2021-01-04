@@ -1,5 +1,5 @@
 # BNT162b2-vaccine
-The point of this challenge is to create an algorithm to figure out the mRNA sequence of the BNT162b2-vaccine by replacing the last amnio acid in each codon. This is the easy part, RNA folding needs to get integrated somehow for better optimazation.
+The point of this challenge is to create an algorithm to figure out the mRNA sequence of the BNT162b2-vaccine by replacing the last amnio acid in each codon. This is the easy part, it seems like RNA folding needs to get integrated somehow for better optimazation as brought up in this [PR](https://github.com/berthubert/bnt162b2/pull/3).
 
 Came across:
 - [Reverse Engineering the source code of the BioNTech/Pfizer SARS-CoV-2 Vaccine](https://berthub.eu/articles/posts/reverse-engineering-source-code-of-the-biontech-pfizer-vaccine/) 
