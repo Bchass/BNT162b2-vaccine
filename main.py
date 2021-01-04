@@ -20,7 +20,7 @@ for(_, tic, tac) in tictac:
     ac = tic
     print(ac)
 
-    if tic[2] in ['G','C']:
+    if tic[2] in "GC":
         print("Codon is already G or C")
     else:
         result = tic[:2] + "C"
