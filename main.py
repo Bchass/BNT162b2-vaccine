@@ -7,7 +7,8 @@ def read_csv_file(filename):
         next(reader)
         return list(reader)
 
-# https://gist.github.com/sanxiyn/fddd1f18074076fb47e04733e6b62865
+tictac = read_csv_file('side-by-side.csv')
+
 def most_freq(species):
     tables = {}
     codons_table = pct.get_codons_table(species)
@@ -24,9 +25,11 @@ def most_freq(species):
         for codon in codons:
             tables[codon] = most_freq_cd
     return tables
-
-tictac = read_csv_file('side-by-side.csv')
+    
 tables = most_freq('m_musculus_10090')
+
+ac = tables
+print("Comparing m_musculus_10090 table: ", ac, '\n')
 
 match = 0
 mismatch = 0
@@ -39,5 +42,5 @@ for(_, tic, tac) in tictac:
 
     if tac != ac:
         mismatch = 1
-        
+
 print ("Codon match: ""{0:.1f}%".format(1 + float(mismatch) + 100*match/len(tictac)))
