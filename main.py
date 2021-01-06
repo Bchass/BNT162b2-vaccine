@@ -41,6 +41,6 @@ for(_, tic, tac) in tictac:
         match +=1
 
     if tac != ac:
-        mismatch = 1
+        mismatch -1
 
-print ("Codon match: ""{0:.1f}%".format(1 + float(mismatch) + 100*match/len(tictac)))
+print ("Codon match: ""{0:.1f}%".format(1 - (mismatch) + 100*match/len(tictac)))
