@@ -25,22 +25,20 @@ def most_freq(species):
         for codon in codons:
             tables[codon] = most_freq_cd
     return tables
-    
+ 
 tables = most_freq('m_musculus_10090')
 
 ac = tables
 print("Comparing m_musculus_10090 table: ", ac, '\n')
 
+mismatches = 0
 match = 0
-mismatch = 0
-
 for(_, tic, tac) in tictac:
     ac = tables[tic]
-
     if tac == ac:
         match +=1
+    else:
+        if tac != ac:
+            mismatches = 0
 
-    if tac != ac:
-        mismatch -1
-
-print ("Codon match: ""{0:.1f}%".format(1 - (mismatch) + 100*match/len(tictac)))
+print ("Codon match: ""{0:.1f}%".format(1 - (mismatches) + 100*match/len(tictac)))
