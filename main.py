@@ -41,4 +41,4 @@ for(_, tic, tac) in tictac:
         if tac != ac:
             mismatches = 0
 
-print ("Codon match: ""{0:.1f}%".format(1 - (mismatches) + 100*match/len(tictac)))
+print ("Codon match: ""{0:.2f}%".format(1 - mismatches + 100*match/len(tictac)))
